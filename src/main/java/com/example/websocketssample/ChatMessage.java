@@ -1,32 +1,20 @@
 package com.example.websocketssample;
 
-public class Message {
-    private String name;
+
+public class ChatMessage {
     private String sender;
     private String content;
-    private String sentAt;
+    private long sentAt;
 
+    public ChatMessage() {}
 
-    public Message() {}
-
-    public Message(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Message(String sender, String content, String sentAt) {
+    public ChatMessage(String sender, String content, long sentAt) {
         this.sender = sender;
         this.content = content;
         this.sentAt = sentAt;
     }
 
+    // Getteriai ir setteriai
     public String getSender() {
         return sender;
     }
@@ -43,11 +31,12 @@ public class Message {
         this.content = content;
     }
 
-    public String getSentAt() {
+    public long getSentAt() {
         return sentAt;
     }
 
-    public void setSentAt(String sentAt) {
+    public void setSentAt(long sentAt) {
         this.sentAt = sentAt;
     }
 }
+
